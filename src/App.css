@@ -1,0 +1,23 @@
+@media (min-width: 1080px) {
+  .App {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .Your_order_id {
+    grid-column: 2;
+    grid-row: 1 /-1;
+  }
+
+  .BeerList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+
+  .Beer {
+    padding: 10px;
+    border: 1px solid black;
+  }
+}
