@@ -1,0 +1,52 @@
+@use "../base/colors";
+/* MOBILVERSION */
+.each_staff {
+  grid-area: each_staff;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.status {
+  grid-area: status;
+}
+.serving_no {
+  grid-area: serving_no;
+  text-align: center;
+}
+
+#staff_wrapper article {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "each_staff status serving_no";
+  border: colors.$border_color_on_components solid 2px;
+  border-radius: 20px;
+  background-color: colors.$baggrundscolor_on_components;
+  margin: 10px auto;
+  padding: 4px;
+  gap: 35px;
+  align-items: center;
+}
+
+p.name {
+  font-weight: bolder;
+}
+img.staff_img {
+  max-width: 10vw;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  img.staff_img {
+    max-width: 8vw;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  img.staff_img {
+    max-width: 2.2vw;
+  }
+}

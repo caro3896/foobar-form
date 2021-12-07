@@ -6,9 +6,6 @@ export default function CustomerBasket(props) {
     return previousValue + currentValue.price;
   }, initialValue);
 
-  console.log("hej");
-  console.log(props.basket);
-
   const selectedBeers = props.basket.map((beer) => <SelectedBeer {...beer} />);
 
   return (

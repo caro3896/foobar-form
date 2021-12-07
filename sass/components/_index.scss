@@ -1,0 +1,8 @@
+// Her er hver lille compontent i sin egen fil (f.eks. tap.scss) - f.eks. styling for hver tap, ordreseddel, mm.
+
+@forward "bartenders";
+@forward "instorage";
+@forward "ordernotes";
+@forward "podium";
+@forward "salesnotes";
+@forward "tap";

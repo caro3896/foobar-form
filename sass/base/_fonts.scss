@@ -1,0 +1,49 @@
+@use "colors";
+
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
+
+@font-face {
+  font-family: "playfair_displayregular";
+  src: url("playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("playfairdisplay-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$base_font: "News Cycle", sans-serif;
+
+// FONT SIZES
+h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: colors.$baggrundcolor;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: colors.$base_color;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: colors.$base_color;
+  font-family: $base_font;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: colors.$base_color;
+  font-family: $base_font;
+}
+
+h4 {
+  font-size: 1rem;
+  color: colors.$base_color;
+  font-family: $base_font;
+}
+
+p,
+li {
+  font-size: 1rem;
+  font-family: $base_font;
+  color: colors.$base_color;
+}
+
+$p_small: 0.8rem;

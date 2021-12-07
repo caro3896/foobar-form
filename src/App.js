@@ -3,20 +3,17 @@ import "./App.css";
 import Order from "./components/Order";
 import BeerList from "./components/BeerList";
 import Basket from "./components/Basket";
+import Form from "./components/Form";
 
 import { useState } from "react/cjs/react.development";
 import { useEffect } from "react";
 
 function App() {
-  //const [beers, setBeers] = useState([]);
   const [availableBeers, setAvailableBeers] = useState([]);
   const [basket, setBasket] = useState([]);
-  //const [articleToLoad, setArticlesToLoad] = useState(10);
 
   useEffect(() => {
     Promise.all([fetch("https://the-three-must-get-beers.herokuapp.com/").then((res) => res.json()), fetch("https://the-three-must-get-beers.herokuapp.com/beertypes").then((res) => res.json())]).then((data) => {
-      //setBeers(data[1]);
-
       const taps = data[0].taps;
       // [{},{},]
 
@@ -49,6 +46,7 @@ function App() {
       <Order />
       <BeerList setBasket={addToBasket} beers={availableBeers} />
       <Basket basket={basket} />
+      <Form basket={basket} />
     </div>
   );
 }
