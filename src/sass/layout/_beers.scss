@@ -1,0 +1,66 @@
+@use "../base/colors";
+/* MOBILVERSION */
+
+.BeerList {
+  display: grid;
+  gap: 20px;
+
+  .Beer {
+    background-color: colors.$baggrundscolor_on_components;
+    border: 2px solid colors.$border_color_on_components;
+    border-radius: 40px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    padding: 20px;
+
+    img {
+      width: 50%;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .Impression {
+      display: none;
+    }
+
+    .addOrRemove {
+      display: flex;
+      gap: 15px;
+
+      button {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: colors.$base_color;
+      }
+
+      p {
+        background: colors.$baggrundcolor;
+        border: 2px solid colors.$border_color_on_components;
+        border-radius: 8px;
+        width: 35px;
+        padding: 2px;
+      }
+    }
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  .BeerList {
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  .BeerList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

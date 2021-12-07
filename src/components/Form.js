@@ -4,8 +4,10 @@ export default function Form(props) {
     return previousValue + currentValue.price;
   }, initialValue);
   return (
-    <fieldset>
-      <legend>Payment</legend>
+    <fieldset className="Payment_id">
+      <legend>
+        <h1>Payment</h1>
+      </legend>
       <form action="">
         <div className="Form-group">
           <label htmlFor="name">Your name</label>

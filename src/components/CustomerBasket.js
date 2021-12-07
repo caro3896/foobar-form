@@ -12,8 +12,10 @@ export default function CustomerBasket(props) {
     <div id="CustomerBasket">
       {selectedBeers}
       <hr />
-      <p>{props.basket.length} beers in total</p>
-      <p>${sum}</p>
+      <span>
+        <p>{props.basket.length} beers in total</p>
+        <p>${sum}</p>
+      </span>
     </div>
   );
 }

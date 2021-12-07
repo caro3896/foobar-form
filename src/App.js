@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import Order from "./components/Order";
 import BeerList from "./components/BeerList";

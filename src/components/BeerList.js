@@ -8,7 +8,9 @@ export default function BeerList(props) {
   //return <section className="BeerList">{beers}</section>;
   return (
     <fieldset className="Beers_id">
-      <legend>Beers</legend>
+      <legend>
+        <h1>Beers</h1>
+      </legend>
       <section className="BeerList">{beers}</section>
     </fieldset>
   );

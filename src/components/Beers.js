@@ -41,9 +41,11 @@ export default function Beer(props) {
       {/* <button onClick={readMore} className="Read_more">
         Read more
       </button> */}
-      <button onClick={addOne}>+</button>
-      {amount}
-      <button onClick={removeOne}>-</button>
+      <span className="addOrRemove">
+        <button onClick={removeOne}>-</button>
+        <p>{amount}</p>
+        <button onClick={addOne}>+</button>
+      </span>
     </article>
   );
 }

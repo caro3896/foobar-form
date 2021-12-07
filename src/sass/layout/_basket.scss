@@ -1,0 +1,19 @@
+@use "../base/colors";
+/* MOBILVERSION */
+
+#CustomerBasket {
+  article,
+  span {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* TABLET */
+
+@media (min-width: 768px) {
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+}

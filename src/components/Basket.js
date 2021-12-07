@@ -8,7 +8,9 @@ export default function Basket(props) {
   }
   return (
     <fieldset className="Your_order_id">
-      <legend>Your Order</legend>
+      <legend>
+        <h1>Your Order</h1>
+      </legend>
       <CustomerBasket basket={props.basket} />
       <button className="Next" onClick={goToPayment}>
         Go to payment

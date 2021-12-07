@@ -1,0 +1,55 @@
+@use "./sass/base";
+@use "./sass/layout";
+@use "../src/sass/base/colors";
+
+// Sophie
+
+/* MOBILVERSION */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  margin: 20px;
+}
+
+body {
+  background-color: colors.$baggrundcolor;
+}
+
+fieldset {
+  border: 3px solid colors.$base_color;
+  margin-bottom: 20px;
+  padding: 25px;
+}
+
+legend {
+  text-align: center;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  .App {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+  }
+
+  .Your_order_id {
+    grid-column: 2;
+    grid-row: 1 /-1;
+  }
+
+  fieldset {
+    margin-bottom: 0;
+  }
+}
