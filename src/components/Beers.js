@@ -2,7 +2,8 @@ import { useState } from "react";
 import Basket from "./Basket";
 
 export default function Beer(props) {
-  console.log(props);
+  // console.log(props);
+  // console.log(props.basket);
 
   const [amount, setAmount] = useState(0);
 
@@ -25,7 +26,7 @@ export default function Beer(props) {
       }
       return 0;
     });
-    //props.setBasket(props.filter(props.indexOf(props.name, 1)));
+    // props.setBasket(props.basket.filter((x) => x.name == props.name));
   }
 
   function readMore() {}
