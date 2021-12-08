@@ -14,7 +14,7 @@ export default function CustomerBasket(props) {
       <hr />
       <span>
         <p>{props.basket.length} beers in total</p>
-        <p>${sum}</p>
+        <p>{sum} DKK</p>
       </span>
     </div>
   );

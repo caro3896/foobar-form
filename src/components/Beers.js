@@ -20,13 +20,16 @@ export default function Beer(props) {
   // HJÆLP HER
   function removeOne() {
     console.log(props);
+    console.log(props.basket);
     setAmount((prevState) => {
       if (prevState > 0) {
+        //props.basket.map(props.basket.name !== props.name);
+        //prevState(props.basket.filter((x) => x.name == props.name));
         return prevState - 1;
       }
       return 0;
     });
-    // props.setBasket(props.basket.filter((x) => x.name == props.name));
+    props.basket.pop(props.basket.name); // Pop = fjerne det nyeste i arrayet.
   }
 
   function readMore() {
