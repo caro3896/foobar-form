@@ -3,48 +3,104 @@
 
 /* MOBIL VERSION */
 
-.Form-group {
-  display: grid;
-  color: colors.$base_color;
-  font-family: fonts.$base_font;
+form {
+  width: 80%;
+  margin: auto;
 
-  input {
-    :valid {
-      border: 3px solid colors.$color_on_available;
+  .Form-group {
+    display: grid;
+    color: colors.$base_color;
+    font-family: fonts.$base_font;
+
+    .Checkmark {
+      display: flex;
+      gap: 10px;
+
+      input {
+        outline: none;
+        border: 3px solid transparent;
+        transition: 0.3s;
+        content: " ";
+      }
+
+      input:valid {
+        border: 3px solid colors.$color_on_available;
+      }
+
+      input:valid ~ .Checkmark {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.612' height='17.612' viewBox='0 0 17.612 17.612'%3E%3Cpath id='Icon_ionic-md-checkmark-circle' data-name='Icon ionic-md-checkmark-circle' d='M12.181 3.375a8.806 8.806 0 1 0 8.806 8.806A8.832 8.832 0 0 0 12.181 3.375Zm-1.808 13.5L5.86 12.363 7.126 11.1l3.251 3.251L17.24 7.486l1.266 1.266Z' transform='translate(-3.375 -3.375)' fill='%23299b25'/%3E%3C/svg%3E")
+          no-repeat right;
+        padding-left: 20px;
+      }
+
+      input:invalid {
+        border: 3px solid colors.$color_on_unavailable;
+      }
+
+      input:placeholder-shown {
+        border: 3px solid transparent;
+      }
+
+      #name,
+      #cardno {
+        width: 200px;
+      }
+
+      #expire-month {
+        width: 50px;
+      }
+
+      #expire-year,
+      #cvc {
+        width: 70px;
+      }
     }
 
-    :invalid {
-      border: 3px solid colors.$color_on_unavailable;
+    .Error {
+      visibility: hidden;
     }
 
-    :placeholder-shown {
-      border: 3px solid transparent;
+    input:not(:focus, :placeholder-shown):invalid ~ .Error {
+      color: colors.$color_on_unavailable;
+      visibility: visible;
     }
   }
-
-  .Error {
-    color: colors.$color_on_unavailable;
-    //visibility: hidden;
-  }
-
-  .Checkmark {
-    display: flex;
-  }
-
-  .Checkmark::after {
-    content: "";
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.612' height='17.612' viewBox='0 0 17.612 17.612'%3E%3Cpath id='Icon_ionic-md-checkmark-circle' data-name='Icon ionic-md-checkmark-circle' d='M12.181 3.375a8.806 8.806 0 1 0 8.806 8.806A8.832 8.832 0 0 0 12.181 3.375Zm-1.808 13.5L5.86 12.363 7.126 11.1l3.251 3.251L17.24 7.486l1.266 1.266Z' transform='translate(-3.375 -3.375)' fill='%23299b25'/%3E%3C/svg%3E")
-      no-repeat right;
-    padding-left: 20px;
+  .Total,
+  .SumTotal {
+    text-align-last: center;
+    font-size: 1.2rem;
   }
 }
+
+button#pay {
+  margin: 10px 0;
+}
+
+hr {
+  margin-bottom: 10px;
+  border-color: colors.$base_color;
+}
+
+/* .Checkmark::after {
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.612' height='17.612' viewBox='0 0 17.612 17.612'%3E%3Cpath id='Icon_ionic-md-checkmark-circle' data-name='Icon ionic-md-checkmark-circle' d='M12.181 3.375a8.806 8.806 0 1 0 8.806 8.806A8.832 8.832 0 0 0 12.181 3.375Zm-1.808 13.5L5.86 12.363 7.126 11.1l3.251 3.251L17.24 7.486l1.266 1.266Z' transform='translate(-3.375 -3.375)' fill='%23299b25'/%3E%3C/svg%3E")
+    no-repeat right;
+  padding-left: 20px;
+} */
 
 /* TABLET */
 
 @media (min-width: 768px) {
+  form {
+    width: 50%;
+  }
 }
 
 /* DESKTOP */
 
 @media (min-width: 1024px) {
+  form {
+    width: 350px;
+  }
 }

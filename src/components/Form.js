@@ -3,6 +3,17 @@ export default function Form(props) {
   let sum = props.basket.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue.price;
   }, initialValue);
+
+  /* Form validation mærke */
+
+  function handleChange() {
+    if (this) {
+      console.log(this);
+    } else {
+      console.log(this);
+    }
+  }
+
   return (
     <fieldset className="Payment_id">
       <legend>
@@ -12,7 +23,7 @@ export default function Form(props) {
         <div className="Form-group">
           <label htmlFor="name">Your name</label>
           <span className="Checkmark">
-            <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" required />
+            <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" required onChange={handleChange} />
           </span>
           <span className="Error">Please enter your full name</span>
         </div>
@@ -25,9 +36,9 @@ export default function Form(props) {
         </div>
         <div className="Form-group">
           <label htmlFor="expire-month">Expiry Date</label>
+          <label htmlFor="expire-year"></label>
           <span className="Checkmark">
             <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" required pattern="[0-9]{2}" />
-            <label htmlFor="expire-year"></label>
             <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YYYY" required pattern="[0-9]{4}" />
           </span>
           <span className="Error">Eg. 01/2022</span>
@@ -35,11 +46,13 @@ export default function Form(props) {
         <div className="Form-group">
           <label htmlFor="cvc">CVC</label>
           <span className="Checkmark">
-            <input type="tel" id="cvc" name="cvc" inputmode="numeric" placeholder="XXX" required pattern="[0-9]{3}"></input>
+            <input type="tel" id="cvc" name="cvc" inputmode="numeric" placeholder="XXX" required pattern="[0-9]{3}" />
           </span>
           <span className="Error">Security code (3 digits on back of card)</span>
         </div>
-        <p className="sumTotal">{sum} DKK</p>
+        <hr />
+        <p className="Total">Price in total:</p>
+        <p className="SumTotal">{sum} DKK</p>
         <button id="pay" type="submit">
           Pay and order
         </button>
