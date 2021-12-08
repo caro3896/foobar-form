@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Order />
-      <BeerList setBasket={addToBasket} beers={availableBeers} />
+      <BeerList setBasket={addToBasket} basket={basket} beers={availableBeers} />
       <Basket basket={basket} />
       <Form basket={basket} />
     </div>

@@ -1,8 +1,6 @@
 import CustomerBasket from "./CustomerBasket";
 
 export default function Basket(props) {
-  console.log(props.cartBeer);
-
   function goToPayment() {
     console.log("payment button clicked");
   }
