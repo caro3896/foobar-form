@@ -1,0 +1,157 @@
+@use "../base/colors";
+
+/* MOBILE */
+.Overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.Overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.About_beer {
+  position: fixed;
+  width: 345px;
+  margin: auto;
+  height: 700px;
+  top: 8%;
+  left: 4.3%;
+}
+
+.modal {
+  background: colors.$baggrundscolor_on_components;
+  border-radius: 20px;
+  // box-shadow: 10px 10px 55px 20px rgb(0 0 0 / 75%);
+  backdrop-filter: blur(20px);
+  //-webkit-backdrop-filter: blur(20px);
+  border: 2px solid colors.$border_color_on_components;
+  overflow-y: scroll;
+  padding: 10px 10px 15px 10px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.NameModal {
+  text-align: center;
+  margin-top: 23px;
+}
+
+.CategoryModal {
+  font-weight: bold;
+  text-align: center;
+}
+
+.AlcModal {
+  text-align: center;
+  font-weight: bold;
+}
+
+.columnRight .HeaderModal {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.columnRight {
+  padding: 0 10px 0 10px;
+}
+
+img.LabelModal {
+  width: 38%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.Close {
+  color: colors.$base_color;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  position: fixed;
+  right: 10px;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  .About_beer {
+    width: 702px;
+    height: 480px;
+    top: 32%;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.3fr;
+    grid-template-rows: auto;
+  }
+  .AlcModal {
+    font-size: 1.3rem;
+  }
+  .CategoryModal {
+    font-size: 1.4rem;
+  }
+  .NameModal {
+    font-size: 1.9rem;
+    margin-top: 0px;
+  }
+  .FlavorModal {
+    margin-bottom: 18px;
+  }
+  img.LabelModal {
+    width: 53%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  .columnRight .HeaderModal {
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  .columnLeft {
+    display: grid;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .columnRight {
+    display: grid;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px 0 40px;
+    border-left: 1px solid colors.$base_color;
+  }
+  .Close {
+    font-size: 1.9rem;
+    right: 11px;
+    top: 11px;
+  }
+}
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .About_beer {
+    left: 11%;
+    width: 800px;
+    height: 489px;
+  }
+  .FlavorModal {
+    font-size: 1.1rem;
+  }
+  .MouthfeelModal {
+    font-size: 1.1rem;
+  }
+}
