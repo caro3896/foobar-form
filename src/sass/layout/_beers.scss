@@ -84,7 +84,7 @@
   }
   .Read_more:hover {
     background-color: colors.$color_on_button_in_hover;
-    border: colors.$color_on_button_border_in_hover 1px solid;
+    border: 1px solid #0c1618;
     box-shadow: inset 2px 2px 6px colors.$color_on_box_shadow, 2px 2px 5px colors.$color_on_box_shadow;
     color: colors.$base_color;
   }
