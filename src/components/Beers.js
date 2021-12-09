@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Basket from "./Basket";
 
 export default function Beer(props) {
@@ -6,6 +6,7 @@ export default function Beer(props) {
   // console.log(props.basket);
 
   const [amount, setAmount] = useState(0);
+  const [isOpen, setIsOpen] = useState(true);
 
   function addOne() {
     setAmount((prevState) => prevState + 1);
@@ -33,7 +34,7 @@ export default function Beer(props) {
   }
 
   function readMore() {
-    console.log("heeej");
+    setIsOpen((oldState) => !oldState);
   }
 
   return (
@@ -54,7 +55,7 @@ export default function Beer(props) {
         </span>
       </article>
 
-      <article className="About_beer modal hide">
+      <article className={`About_beer modal ${isOpen ? "hide" : ""}`}>
         <button onClick={readMore} className="Close">
           X
         </button>
@@ -71,10 +72,10 @@ export default function Beer(props) {
           <b>Apperance</b> <br /> {props.description.appearance}
         </p> */}
         <div className="columnRight">
-          <p className="HeaderModal">Flavor</p>
-          <p className="FlavorModal">{props.description.flavor}</p>
-          <p className="HeaderModal">Mouthfeel</p>
-          <p className="MouthfeelModal">{props.description.mouthfeel}</p>
+          <p className="HeaderModal">Overall Impression</p>
+          <p className="MouthfeelModal">{props.description.overallImpression}</p>
+          <p className="HeaderModal">Aroma</p>
+          <p className="FlavorModal">{props.description.aroma}</p>
         </div>
       </article>
       <div className="Overlay"></div>

@@ -12,6 +12,8 @@ function App() {
   const [availableBeers, setAvailableBeers] = useState([]);
   const [basket, setBasket] = useState([]);
 
+  const [payment, setPayment] = useState(false);
+
   useEffect(() => {
     Promise.all([fetch("https://the-three-must-get-beers.herokuapp.com/").then((res) => res.json()), fetch("https://the-three-must-get-beers.herokuapp.com/beertypes").then((res) => res.json())]).then((data) => {
       const taps = data[0].taps;
@@ -42,12 +44,17 @@ function App() {
     });
   }
 
+  function goToPayment() {
+    console.log("voi tets");
+    setPayment((oldState) => !oldState);
+  }
+
   return (
     <div className="App">
-      <Order />
-      <BeerList setBasket={addToBasket} basket={basket} beers={availableBeers} />
-      <Basket basket={basket} />
-      <Form basket={basket} />
+      <Order setPayment={payment} />
+      <BeerList setBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
+      <Basket basket={basket} setPayment={goToPayment} />
+      <Form basket={basket} setPayment={payment} />
     </div>
   );
 }

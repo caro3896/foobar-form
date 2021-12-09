@@ -1,6 +1,6 @@
-export default function Order() {
+export default function Order(props) {
   return (
-    <fieldset className="Order_id">
+    <fieldset className={`Order_id ${props.setPayment ? "hide" : ""}`}>
       <legend>
         <h1>Order</h1>
       </legend>

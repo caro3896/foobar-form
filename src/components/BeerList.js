@@ -7,7 +7,7 @@ export default function BeerList(props) {
   //console.log(beers);
   //return <section className="BeerList">{beers}</section>;
   return (
-    <fieldset className="Beers_id">
+    <fieldset className={`Beers_id ${props.setPayment ? "hide" : ""}`}>
       <legend>
         <h1>Beers</h1>
       </legend>
