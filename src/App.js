@@ -45,7 +45,6 @@ function App() {
   }
 
   function goToPayment() {
-    console.log("voi tets");
     setPayment((oldState) => !oldState);
   }
 

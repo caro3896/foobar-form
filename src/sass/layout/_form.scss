@@ -12,59 +12,68 @@ form {
     color: colors.$base_color;
     font-family: fonts.$base_font;
 
-    .Checkmark {
-      display: flex;
-      gap: 10px;
+    input {
+      outline: none;
+      border: 2px solid colors.$border_color_on_components;
+      transition: 0.3s;
+      content: " ";
+      background-color: colors.$baggrundscolor_on_components;
+      color: colors.$base_color;
+      padding: 6px;
+    }
 
-      input {
-        outline: none;
-        border: 2px solid colors.$border_color_on_components;
-        transition: 0.3s;
-        content: " ";
-        background-color: colors.$baggrundscolor_on_components;
-        color: colors.$base_color;
-        padding: 6px;
-      }
+    input:valid {
+      border: 2px solid colors.$color_on_available;
+    }
 
-      input:valid {
-        border: 2px solid colors.$color_on_available;
-      }
-
-      /* input:valid ~ .Checkmark {
+    /* input:valid ~ .Checkmark {
         content: "";
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.612' height='17.612' viewBox='0 0 17.612 17.612'%3E%3Cpath id='Icon_ionic-md-checkmark-circle' data-name='Icon ionic-md-checkmark-circle' d='M12.181 3.375a8.806 8.806 0 1 0 8.806 8.806A8.832 8.832 0 0 0 12.181 3.375Zm-1.808 13.5L5.86 12.363 7.126 11.1l3.251 3.251L17.24 7.486l1.266 1.266Z' transform='translate(-3.375 -3.375)' fill='%23299b25'/%3E%3C/svg%3E")
           no-repeat right;
         padding-left: 20px;
       } */
 
-      input:invalid {
-        border: 2px solid colors.$color_on_unavailable;
-      }
+    input:invalid {
+      border: 2px solid colors.$color_on_unavailable;
+    }
 
-      input:placeholder-shown {
-        border: 2px solid colors.$border_color_on_components;
-      }
+    input:placeholder-shown {
+      border: 2px solid colors.$border_color_on_components;
+    }
 
-      #name,
-      #cardno {
-        width: 200px;
-      }
+    #name,
+    #cardno {
+      width: 250px;
+    }
 
-      #expire-month {
-        width: 50px;
-      }
+    #expire-month {
+      width: 70px;
+    }
 
-      #expire-year,
-      #cvc {
-        width: 70px;
-      }
+    #expire-year,
+    #cvc {
+      width: 70px;
     }
 
     .Error {
       color: colors.$color_on_unavailable;
       font-size: 0.9rem;
       visibility: hidden;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 16px;
+        margin: 5px 5px 5px 0;
+      }
     }
+  }
+
+  .Expire {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    column-gap: 5px;
   }
 
   input:not(:focus, :placeholder-shown):invalid ~ .Error {
@@ -100,5 +109,6 @@ hr {
 @media (min-width: 1024px) {
   form {
     width: 350px;
+    margin-top: 7%;
   }
 }

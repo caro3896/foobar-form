@@ -2,7 +2,14 @@ import { useState } from "react";
 import CustomerBasket from "./CustomerBasket";
 
 export default function Basket(props) {
-  // console.log(props);
+  console.log(props);
+
+  const [buttonRemoved, setButtonRemoved] = useState(false);
+
+  function test() {
+    props.setPayment();
+    setButtonRemoved((oldState) => !oldState);
+  }
 
   return (
     <fieldset className="Your_order_id">
@@ -10,7 +17,7 @@ export default function Basket(props) {
         <h1>Your Order</h1>
       </legend>
       <CustomerBasket basket={props.basket} />
-      <button className="Next" onClick={props.setPayment}>
+      <button className={`Next ${buttonRemoved ? "hide" : ""}`} onClick={test}>
         Go to payment
       </button>
     </fieldset>

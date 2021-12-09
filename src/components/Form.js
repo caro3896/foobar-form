@@ -23,33 +23,69 @@ export default function Form(props) {
       <form action="">
         <div className="Form-group">
           <label htmlFor="name">Your name</label>
-          <span className="Checkmark">
-            <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" required onChange={handleChange} />
+          <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" required onChange={handleChange} />
+          <span className="Error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
+              <path
+                id="Icon_material-error"
+                data-name="Icon material-error"
+                d="M11.806,3a8.806,8.806,0,1,0,8.806,8.806A8.809,8.809,0,0,0,11.806,3Zm.881,13.209H10.925V14.448h1.761Zm0-3.522H10.925V7.4h1.761Z"
+                transform="translate(-3 -3)"
+                fill="#9b2525"
+              />
+            </svg>
+            Please enter your full name
           </span>
-          <span className="Error">Please enter your full name</span>
         </div>
         <div className="Form-group">
           <label htmlFor="cardno">Card Number</label>
-          <span className="Checkmark">
-            <input type="tel" id="cardno" name="cardno" inputmode="numeric" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{16}" required />
+          <input type="tel" id="cardno" name="cardno" inputmode="numeric" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{16}" required />
+          <span className="Error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
+              <path
+                id="Icon_material-error"
+                data-name="Icon material-error"
+                d="M11.806,3a8.806,8.806,0,1,0,8.806,8.806A8.809,8.809,0,0,0,11.806,3Zm.881,13.209H10.925V14.448h1.761Zm0-3.522H10.925V7.4h1.761Z"
+                transform="translate(-3 -3)"
+                fill="#9b2525"
+              />
+            </svg>
+            Must be 16 characters long
           </span>
-          <span className="Error">Must be 16 characters long</span>
         </div>
-        <div className="Form-group">
+        <div className="Form-group Expire">
           <label htmlFor="expire-month">Expiry Date</label>
           <label htmlFor="expire-year"></label>
-          <span className="Checkmark">
-            <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" required pattern="[0-9]{2}" />
-            <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YYYY" required pattern="[0-9]{4}" />
+          <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" required pattern="[0-9]{2}" />
+          <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YYYY" required pattern="[0-9]{4}" />
+          <span className="Error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
+              <path
+                id="Icon_material-error"
+                data-name="Icon material-error"
+                d="M11.806,3a8.806,8.806,0,1,0,8.806,8.806A8.809,8.809,0,0,0,11.806,3Zm.881,13.209H10.925V14.448h1.761Zm0-3.522H10.925V7.4h1.761Z"
+                transform="translate(-3 -3)"
+                fill="#9b2525"
+              />
+            </svg>
+            Eg. 01/2022
           </span>
-          <span className="Error">Eg. 01/2022</span>
         </div>
         <div className="Form-group">
           <label htmlFor="cvc">CVC</label>
-          <span className="Checkmark">
-            <input type="tel" id="cvc" name="cvc" inputmode="numeric" placeholder="XXX" required pattern="[0-9]{3}" />
+          <input type="tel" id="cvc" name="cvc" inputmode="numeric" placeholder="XXX" required pattern="[0-9]{3}" />
+          <span className="Error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
+              <path
+                id="Icon_material-error"
+                data-name="Icon material-error"
+                d="M11.806,3a8.806,8.806,0,1,0,8.806,8.806A8.809,8.809,0,0,0,11.806,3Zm.881,13.209H10.925V14.448h1.761Zm0-3.522H10.925V7.4h1.761Z"
+                transform="translate(-3 -3)"
+                fill="#9b2525"
+              />
+            </svg>
+            Security code (3 digits on back of card)
           </span>
-          <span className="Error">Security code (3 digits on back of card)</span>
         </div>
         <hr />
         <p className="Total">Price in total:</p>
