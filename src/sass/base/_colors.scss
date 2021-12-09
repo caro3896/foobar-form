@@ -1,7 +1,7 @@
 //Baggrundsfarve
 $baggrundcolor: #0c1618;
 
-//Farven på borderen rundt om boksene og farve på font
+//Farven på borderen rundt om boksene og farve på font samt knapper
 $base_color: #c6ad5d;
 
 //Baggrundsfarve på components
@@ -24,3 +24,16 @@ $color_on_available: #209311;
 
 //Farve på bartenders status - Optaget
 $color_on_unavailable: #a21b1b;
+
+//farve på skyggen inde i knappen (box-shadow: inset ...)
+$color_on_inner_shadow: #ffefbbbf;
+
+//farve på skyggen rundt om knappen og borderen (box-shadow: ...)
+//også farven på skygge inde i knappe på :hover
+$color_on_box_shadow: #000000;
+
+//farve på knapper i :hover
+$color_on_button_in_hover: #112026;
+
+//farve på border på knappen i :hover
+$color_on_border_in_hover: #0c1618;
