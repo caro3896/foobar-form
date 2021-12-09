@@ -51,15 +51,30 @@ export default function Beer(props) {
         </span>
       </article>
 
-      <article class="about_beer">
-        <h2 class="name">{props.name}</h2>
-        <h3 class="category"></h3>
-        <p class="alc"></p>
-        <p class="aroma"></p>
-        <p class="appearance"></p>
-        <p class="flavor"></p>
-        <p class="mouthfeel"></p>
+      <article className="About_beer modal hide">
+        <button onClick={readMore} className="Close">
+          X
+        </button>
+        <div className="columnLeft">
+          <h2 className="NameModal">{props.name}</h2>
+          <img className="LabelModal" src={`../images/${props.label}`} alt={props.name} />
+          <h3 className="CategoryModal">{props.category}</h3>
+          <p className="AlcModal">{props.alc}%</p>
+        </div>
+        {/* <p className="AromaModal">
+          <b>Aroma</b> <br /> {props.description.aroma}
+        </p>
+        <p className="AppearanceModal">
+          <b>Apperance</b> <br /> {props.description.appearance}
+        </p> */}
+        <div className="columnRight">
+          <p className="HeaderModal">Flavor</p>
+          <p className="FlavorModal">{props.description.flavor}</p>
+          <p className="HeaderModal">Mouthfeel</p>
+          <p className="MouthfeelModal">{props.description.mouthfeel}</p>
+        </div>
       </article>
+      <div className="Overlay"></div>
     </>
   );
 }
