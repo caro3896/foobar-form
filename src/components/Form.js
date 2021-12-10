@@ -1,17 +1,44 @@
+import { useRef, useState } from "react";
+import { post } from "../Post/crud";
+
 export default function Form(props) {
-  console.log(props);
+  //console.log(props);
   const initialValue = 0;
   let sum = props.basket.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue.price;
   }, initialValue);
 
-  /* Form validation mærke */
+  /* Form post */
 
-  function handleChange() {
-    if (this) {
-      console.log(this);
+  const form = useRef();
+
+  /* const data = [
+    {
+      name: "Hoppily Ever After",
+      amount: 1,
+    },
+    {
+      name: "Row 26",
+      amount: 2,
+    },
+  ]; */
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(form.current.checkValidity());
+    if (form.current.checkValidity()) {
+      props.basket.forEach((beer) => {
+        const data = [
+          {
+            name: beer.name,
+            amount: 1,
+          },
+        ];
+        console.log(data);
+        post(data);
+      });
     } else {
-      console.log(this);
+      form.current.reportValidity();
     }
   }
 
@@ -20,10 +47,10 @@ export default function Form(props) {
       <legend>
         <h1>Payment</h1>
       </legend>
-      <form action="">
+      <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="Form-group">
           <label htmlFor="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" required onChange={handleChange} />
+          <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" requireds />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
@@ -90,7 +117,7 @@ export default function Form(props) {
         <hr />
         <p className="Total">Price in total:</p>
         <p className="SumTotal">{sum} DKK</p>
-        <button id="pay" type="submit">
+        <button id="pay" type="submit" onClick={handleSubmit}>
           Pay and order
         </button>
       </form>

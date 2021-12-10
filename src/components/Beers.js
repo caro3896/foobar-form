@@ -24,13 +24,24 @@ export default function Beer(props) {
     console.log(props.basket);
     setAmount((prevState) => {
       if (prevState > 0) {
-        //props.basket.map(props.basket.name !== props.name);
-        //prevState(props.basket.filter((x) => x.name == props.name));
+        console.log(props.setBasket);
+        props.setBasket(removeAlike(props));
+        // Loop igennem arrayet. Hvis der er flere af den valgte, fjern én
         return prevState - 1;
       }
       return 0;
     });
-    props.basket.pop(props.basket.name); // Pop = fjerne det nyeste i arrayet.
+    //props.basket.pop(props.basket.name); // Pop = fjerne det nyeste i arrayet.
+  }
+
+  function removeAlike(beer) {
+    let test = props.basket.find((x) => x.name === beer.name);
+    // console.log(test);
+    test = props.basket.indexOf(test);
+    //console.log(test);
+    props.basket.slice([test]);
+    console.log(props.basket);
+    return props.basket;
   }
 
   function readMore() {
@@ -55,7 +66,8 @@ export default function Beer(props) {
         </span>
       </article>
 
-      <article className={`About_beer modal ${isOpen ? "hide" : ""}`}>
+      <div className={`Overlay ${isOpen ? "" : "active"}`}></div>
+      <article className={`About_beer ${isOpen ? "hide" : "active"}`}>
         <button onClick={readMore} className="Close">
           X
         </button>
@@ -78,7 +90,6 @@ export default function Beer(props) {
           <p className="FlavorModal">{props.description.aroma}</p>
         </div>
       </article>
-      <div className="Overlay"></div>
     </>
   );
 }
