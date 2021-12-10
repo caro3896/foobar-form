@@ -4,7 +4,7 @@ export default function Order(props) {
       <legend>
         <h1>Order</h1>
       </legend>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aspernatur praesentium earum eveniet quas cumque vel commodi explicabo illo facere id nulla molestias, blanditiis non laboriosam vitae repellendus eligendi atque.</p>
+      <p>Here you can find our selection of beers on tap and order your favorit beer right by the hand. All you need to do is choose the beer you want and go to check out, you’ll get a notification when your order is ready for pick-up.</p>
     </fieldset>
   );
 }

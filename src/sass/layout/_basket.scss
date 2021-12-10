@@ -8,6 +8,24 @@
     justify-content: space-between;
   }
 }
+.Next {
+  margin: 5px;
+  border-radius: 50px;
+  padding: 14px 59px 14px 59px;
+  background: colors.$base_color;
+  border: colors.$color_on_box_shadow 1px solid;
+  box-shadow: inset 4px 6px 15px colors.$color_on_inner_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+}
+.Your_order_id {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding-bottom: 10px;
+}
 /* TABLET */
 
 @media (min-width: 768px) {
@@ -16,4 +34,29 @@
 /* DESKTOP */
 
 @media (min-width: 1080px) {
+  /*
+ //en anden måde at beholde knap i bunden af fieldset
+  .Your_order_id {
+    position: relative;
+  }
+  .Next {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  */
+  .Your_order_id {
+    padding-bottom: 20px;
+  }
+  .Next {
+    padding: 14px 43px 14px 43px;
+    font-size: 1.01rem;
+    border: 2px solid;
+  }
+  .Next:hover {
+    background-color: colors.$color_on_button_in_hover;
+    border: 2px solid #0c1618;
+    box-shadow: inset 3px 3px 7px colors.$color_on_box_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+    color: colors.$base_color;
+  }
 }
