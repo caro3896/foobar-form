@@ -1,4 +1,3 @@
-import { useState } from "react/cjs/react.development";
 import SelectedBeer from "./SelectedBeers";
 
 export default function CustomerBasket(props) {

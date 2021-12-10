@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { post } from "../Post/crud";
 
 export default function Form(props) {

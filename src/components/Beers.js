@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import Basket from "./Basket";
+import { useState } from "react";
 
 export default function Beer(props) {
   // console.log(props);
