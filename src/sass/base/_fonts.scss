@@ -1,6 +1,6 @@
 @use "colors";
 
-@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @font-face {
   font-family: "playfair_displayregular";
@@ -10,7 +10,7 @@
   font-style: normal;
 }
 
-$base_font: "News Cycle", sans-serif;
+$base_font: "Montserrat";
 
 // FONT SIZES
 h1 {
@@ -46,6 +46,10 @@ li {
   font-size: 1rem;
   font-family: $base_font;
   color: colors.$base_color;
+}
+
+button {
+  font-family: $base_font;
 }
 
 $p_small: 0.8rem;
