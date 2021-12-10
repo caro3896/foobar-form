@@ -23,11 +23,25 @@ export default function Form(props) {
     },
   ]; */
 
+  const data = props.basket.map((beer) => {
+    return {
+      name: beer.name,
+      amount: 1,
+    };
+  });
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log(form.current.checkValidity());
     if (form.current.checkValidity()) {
-      props.basket.forEach((beer) => {
+      console.log(data);
+      post(data);
+    } else {
+      form.current.reportValidity();
+    }
+  }
+
+  /* props.basket.forEach((beer) => {
         const data = [
           {
             name: beer.name,
@@ -36,11 +50,7 @@ export default function Form(props) {
         ];
         console.log(data);
         post(data);
-      });
-    } else {
-      form.current.reportValidity();
-    }
-  }
+      }); */
 
   return (
     <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}`}>

@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <Order setPayment={payment} />
-      <BeerList setBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
+      <BeerList setBasket={setBasket} addToBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
       <Basket basket={basket} setPayment={goToPayment} />
       <Form basket={basket} setPayment={payment} />
     </div>

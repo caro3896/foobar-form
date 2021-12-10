@@ -10,7 +10,7 @@ export default function Beer(props) {
 
   function addOne() {
     setAmount((prevState) => prevState + 1);
-    props.setBasket({
+    props.addToBasket({
       name: props.name,
       price: 50,
       id: props.name,
@@ -25,16 +25,29 @@ export default function Beer(props) {
     setAmount((prevState) => {
       if (prevState > 0) {
         console.log(props.setBasket);
-        props.setBasket(removeAlike(props));
+
         // Loop igennem arrayet. Hvis der er flere af den valgte, fjern én
         return prevState - 1;
       }
       return 0;
     });
+    //props.setBasket(removeAlike(props));
+    props.setBasket((prevState) => {
+      const nextState = [];
+      let found = false;
+      prevState.forEach((beer) => {
+        if (props.name !== beer.name || found) {
+          nextState.push(beer);
+        } else {
+          found = true;
+        }
+      });
+      return nextState;
+    });
     //props.basket.pop(props.basket.name); // Pop = fjerne det nyeste i arrayet.
   }
 
-  function removeAlike(beer) {
+  /* function removeAlike(beer) {
     let test = props.basket.find((x) => x.name === beer.name);
     // console.log(test);
     test = props.basket.indexOf(test);
@@ -42,7 +55,7 @@ export default function Beer(props) {
     props.basket.slice([test]);
     console.log(props.basket);
     return props.basket;
-  }
+  } */
 
   function readMore() {
     setIsOpen((oldState) => !oldState);
