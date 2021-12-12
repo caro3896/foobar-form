@@ -9,7 +9,7 @@ export default function CustomerBasket(props) {
   const selectedBeers = props.basket.map((beer) => <SelectedBeer {...beer} />);
 
   return (
-    <div id="CustomerBasket">
+    <div id="CustomerBasket" >
       {selectedBeers}
       <hr />
       <span>

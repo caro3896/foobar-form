@@ -4,7 +4,11 @@ export default function Order(props) {
       <legend>
         <h1>Order</h1>
       </legend>
-      <p>Here you can find our selection of beers on tap and order your favorit beer right by the hand. All you need to do is choose the beer you want and go to check out, you’ll get a notification when your order is ready for pick-up.</p>
+      <p>Welcome to the Foobar order page!</p>
+      <p>Here you'll' find our selection of beers on tap. 
+      <br />Order your favorite beer directly from your table without the hassle of having to wait in line.
+      <br />All you need to do is to find your beer of choice from the list below and click 'Go to payment' once your done. 
+      <br />You’ll get a notification when your order is ready for pick-up.</p>
     </fieldset>
   );
 }

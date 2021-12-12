@@ -11,7 +11,7 @@
     border-radius: 40px;
     display: grid;
     justify-items: center;
-    // gap: 10px;
+    gap: 5px;
     padding: 11px 20px;
 
     img {
@@ -45,7 +45,7 @@
         border: 2px solid colors.$border_color_on_components;
         border-radius: 8px;
         width: 35px;
-        padding: 2px;
+        padding-top: 7px;
       }
     }
   }
@@ -65,7 +65,7 @@
 @media (min-width: 768px) {
   .BeerList {
     grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   .Read_more {
     border-radius: 15px;

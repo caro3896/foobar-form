@@ -1,4 +1,10 @@
 /* MOBILVERSION */
+.Order_id {
+  p {
+    // text-align: center;
+    line-height: 1.6em;
+  }
+}
 
 /* TABLET */
 
@@ -12,6 +18,8 @@
     p {
       width: 87%;
       margin: auto;
+      text-align: center;
+      line-height: 1.8em;
     }
   }
 }
