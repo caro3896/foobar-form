@@ -87,13 +87,23 @@ form {
   }
 }
 
-button#pay {
-  margin: 10px 0;
-}
-
 hr {
   margin-bottom: 10px;
   border-color: colors.$base_color;
+}
+
+#pay {
+  margin: 5px;
+  border-radius: 50px;
+  padding: 14px 59px 14px 59px;
+  background: colors.$base_color;
+  border: colors.$color_on_box_shadow 1px solid;
+  box-shadow: inset 4px 6px 15px colors.$color_on_inner_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
 }
 
 /* TABLET */
@@ -101,6 +111,18 @@ hr {
 @media (min-width: 768px) {
   form {
     width: 50%;
+  }
+
+  #pay {
+    padding: 14px 43px 14px 43px;
+    font-size: 1.01rem;
+    border: 2px solid;
+  }
+  #pay:hover {
+    background-color: colors.$color_on_button_in_hover;
+    border: 2px solid #0c1618;
+    box-shadow: inset 3px 3px 7px colors.$color_on_box_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+    color: colors.$base_color;
   }
 }
 
