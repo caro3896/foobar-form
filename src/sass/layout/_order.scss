@@ -9,6 +9,11 @@
 /* TABLET */
 
 @media (min-width: 768px) {
+  .Order_id {
+    p {
+      text-align: center;
+    }
+  }
 }
 
 /* DESKTOP */
@@ -18,7 +23,6 @@
     p {
       width: 87%;
       margin: auto;
-      text-align: center;
       line-height: 1.8em;
     }
   }

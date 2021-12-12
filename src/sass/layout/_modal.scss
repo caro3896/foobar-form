@@ -129,6 +129,11 @@ img.LabelModal {
     margin-bottom: auto;
     padding: 0 20px 0 40px;
     border-left: 1px solid colors.$base_color;
+    gap: 10px;
+
+    .HeaderModal {
+      margin-bottom: 0;
+    }
   }
   .Close {
     font-size: 1.9rem;
