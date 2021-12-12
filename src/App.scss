@@ -22,7 +22,7 @@ body {
 fieldset {
   border: 3px solid colors.$base_color;
   margin-bottom: 20px;
-  padding: 25px;
+  padding: 20px;
 }
 
 legend {
@@ -41,7 +41,7 @@ legend {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr auto;
-    gap: 20px;
+    grid-gap: 10px 20px;
   }
 
   .Your_order_id {
@@ -56,5 +56,6 @@ legend {
 
   fieldset {
     margin-bottom: 0;
+    padding: 1vw;
   }
 }

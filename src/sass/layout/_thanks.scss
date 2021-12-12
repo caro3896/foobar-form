@@ -1,0 +1,17 @@
+/* MOBIL */
+.Thanks_id {
+  p {
+    line-height: 1.6em;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  .Thanks_id {
+    p {
+      text-align: center;
+      line-height: 1.8em;
+    }
+  }
+}
