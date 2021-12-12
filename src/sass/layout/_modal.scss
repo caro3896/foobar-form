@@ -20,19 +20,25 @@
 
 .About_beer {
   position: fixed;
-  width: 345px;
+  width: 80vw;
   margin: auto;
   height: 700px;
-  top: 8%;
-  left: 4.3%;
+  top: 2%;
   background: colors.$baggrundscolor_on_components;
   border-radius: 20px;
   // box-shadow: 10px 10px 55px 20px rgb(0 0 0 / 75%);
   backdrop-filter: blur(20px);
   //-webkit-backdrop-filter: blur(20px);
   border: 2px solid colors.$border_color_on_components;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   padding: 10px 10px 15px 10px;
+}
+
+.modalContent {
+  position: fixed;
+  height: 686px;
+  overflow: scroll;
+  pointer-events: none;
 }
 
 .NameModal {
@@ -60,6 +66,7 @@
 
 .columnRight {
   padding: 0 10px 0 10px;
+  margin-top: 30px;
 }
 
 img.LabelModal {
@@ -76,6 +83,7 @@ img.LabelModal {
   border: none;
   font-size: 1.8rem;
   position: fixed;
+  top: 0;
   right: 10px;
   cursor: pointer;
 }
