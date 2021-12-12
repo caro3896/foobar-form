@@ -12,7 +12,7 @@ export default function Basket(props) {
   }
 
   return (
-    <fieldset className="Your_order_id">
+    <fieldset className={`Your_order_id ${props.setThanks? "hide" : ""}`}>
       <legend>
         <h1>Your Order</h1>
       </legend>

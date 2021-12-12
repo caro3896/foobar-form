@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { post } from "../Post/crud";
 
 export default function Form(props) {
-  //console.log(props);
   const initialValue = 0;
   let sum = props.basket.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue.price;
@@ -34,8 +33,8 @@ export default function Form(props) {
     e.preventDefault();
     console.log(form.current.checkValidity());
     if (form.current.checkValidity()) {
-      console.log(data);
       post(data);
+      props.setThanks();
     } else {
       form.current.reportValidity();
     }
@@ -53,7 +52,7 @@ export default function Form(props) {
       }); */
 
   return (
-    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}`}>
+    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}`|| `Payment_id ${props.setThanks ? "hide" : ""}`}>
       <legend>
         <h1>Payment</h1>
       </legend>
