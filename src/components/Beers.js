@@ -89,7 +89,7 @@ export default function Beer(props) {
             <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
             <h3 className="CategoryModal">{props.category}</h3>
             <p className="AlcModal">{props.alc}%</p>
-          </div> 
+          </div>
           <div className="columnRight">
             <p className="HeaderModal">Overall Impression</p>
             <p className="MouthfeelModal">{props.description.overallImpression}</p>

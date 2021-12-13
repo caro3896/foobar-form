@@ -6,18 +6,18 @@ export default function Basket(props) {
 
   const [buttonRemoved, setButtonRemoved] = useState(false);
 
-  function test() {
+  function paymentClicked() {
     props.setPayment();
     setButtonRemoved((oldState) => !oldState);
   }
 
   return (
-    <fieldset className={`Your_order_id ${props.setThanks? "hide" : ""}`}>
+    <fieldset className={`Your_order_id ${props.setThanks ? "hide" : ""}`}>
       <legend>
         <h1>Your Order</h1>
       </legend>
       <CustomerBasket basket={props.basket} />
-      <button className={`Next ${buttonRemoved ? "hide" : ""}`} onClick={test}>
+      <button className={`Next ${buttonRemoved ? "hide" : ""}`} onClick={paymentClicked}>
         Go to payment
       </button>
     </fieldset>

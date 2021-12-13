@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { post } from "../Post/crud";
+import "animate.css";
 
 export default function Form(props) {
   const initialValue = 0;
@@ -52,7 +53,7 @@ export default function Form(props) {
       }); */
 
   return (
-    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
+    <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
       <legend>
         <h1>Payment</h1>
       </legend>
