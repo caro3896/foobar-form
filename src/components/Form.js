@@ -22,6 +22,21 @@ export default function Form(props) {
     },
   ]; */
 
+  function spaces(e) {
+    console.log("spaces!");
+    e.target.value = e.target.value
+      .replace(/[^\dA-Z]/g, "")
+      .replace(/(.{4})/g, "$1 ")
+      .trim();
+
+    // const input = document.getElementById("cardno");
+    // if (input.ariaValueMax.length > 0) {
+    //   if (input.value.length % 4 === 0) {
+    //     input.value += "    ";
+    //   }
+    // }
+  }
+
   const data = props.basket.map((beer) => {
     return {
       name: beer.name,
@@ -52,7 +67,7 @@ export default function Form(props) {
       }); */
 
   return (
-    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}`|| `Payment_id ${props.setThanks ? "hide" : ""}`}>
+    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
       <legend>
         <h1>Payment</h1>
       </legend>
@@ -75,7 +90,7 @@ export default function Form(props) {
         </div>
         <div className="Form-group">
           <label htmlFor="cardno">Card Number</label>
-          <input type="tel" id="cardno" name="cardno" inputmode="numeric" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{16}" required />
+          <input type="tel" id="cardno" onChange={spaces} name="cardno" inputmode="numeric" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9\s]{19}" required />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
@@ -93,7 +108,7 @@ export default function Form(props) {
           <label htmlFor="expire-month">Expiry Date</label>
           <label htmlFor="expire-year"></label>
           <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" required pattern="[0-9]{2}" />
-          <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YYYY" required pattern="[0-9]{4}" />
+          <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YY" required pattern="[0-9]{2}" />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
