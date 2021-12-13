@@ -53,13 +53,15 @@ export default function Form(props) {
 
   return (
     <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
+      {/* {{'backgroundColor': status === 'approved' ? 'blue' : status === 'pending' ? 'black' : 'red'}} */}
       <legend>
         <h1>Payment</h1>
       </legend>
+      <button className="back">&#10229;</button>
       <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="Form-group">
           <label htmlFor="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="E.g. John Dillermand" requireds />
+          <input type="text" id="name" name="name" placeholder="E.g. John Doe" requireds />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
