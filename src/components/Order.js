@@ -8,7 +8,7 @@ export default function Order(props) {
       <p>Here you'll' find our selection of beers on tap. 
       <br />Order your favorite beer directly from your table without the hassle of having to wait in line.
       <br />All you need to do is to find your beer of choice from the list below and click 'Go to payment' once your done. 
-      <br />You’ll get a notification when your order is ready for pick-up.</p>
+      <br />Your order will be ready for pick-up shortly after.</p>
     </fieldset>
   );
 }

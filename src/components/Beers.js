@@ -86,7 +86,7 @@ export default function Beer(props) {
         <div className="modalContent">
           <div className="columnLeft">
             <h2 className="NameModal">{props.name}</h2>
-            <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
+            <img className="LabelModal" src={`../../images/${props.label}.webp`} alt={props.name} />
             <h3 className="CategoryModal">{props.category}</h3>
             <p className="AlcModal">{props.alc}%</p>
           </div> 
@@ -97,19 +97,6 @@ export default function Beer(props) {
             <p className="FlavorModal">{props.description.aroma}</p>
           </div>
         </div>
-        
-        {/* <p className="AromaModal">
-          <b>Aroma</b> <br /> {props.description.aroma}
-        </p>
-        <p className="AppearanceModal">
-          <b>Apperance</b> <br /> {props.description.appearance}
-        </p> */}
-        {/* <div className="columnRight">
-          <p className="HeaderModal">Overall Impression</p>
-          <p className="MouthfeelModal">{props.description.overallImpression}</p>
-          <p className="HeaderModal">Aroma</p>
-          <p className="FlavorModal">{props.description.aroma}</p>
-        </div> */}
       </article>
     </>
   );
