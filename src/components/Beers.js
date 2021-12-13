@@ -64,7 +64,7 @@ export default function Beer(props) {
     <>
       <article className="Beer">
         <h2>{props.name}</h2>
-        <img src={`../../images/${props.label}.webp`} alt={props.name} />
+        <img src={`../../images/${props.label}`} alt={props.name} />
         <p className="Alc">{props.alc}% alc</p>
         <p className="Type">{props.category}</p>
         <h3 className="Price">50 DKK</h3>
@@ -86,7 +86,7 @@ export default function Beer(props) {
         <div className="modalContent">
           <div className="columnLeft">
             <h2 className="NameModal">{props.name}</h2>
-            <img className="LabelModal" src={`../../images/${props.label}.webp`} alt={props.name} />
+            <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
             <h3 className="CategoryModal">{props.category}</h3>
             <p className="AlcModal">{props.alc}%</p>
           </div> 
