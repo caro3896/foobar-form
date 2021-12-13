@@ -22,7 +22,7 @@
   position: fixed;
   width: 80vw;
   margin: auto;
-  height: 700px;
+  height: 90vh;
   top: 2%;
   background: colors.$baggrundscolor_on_components;
   border-radius: 20px;
@@ -36,8 +36,9 @@
 
 .modalContent {
   position: fixed;
-  height: 686px;
+  height: 87vh;
   overflow: scroll;
+  width: 75vw;
 }
 
 .NameModal {
