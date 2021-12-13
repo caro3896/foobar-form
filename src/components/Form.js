@@ -53,12 +53,8 @@ export default function Form(props) {
       }); */
 
   return (
-<<<<<<< HEAD
-    <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
-=======
     <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
       {/* {{'backgroundColor': status === 'approved' ? 'blue' : status === 'pending' ? 'black' : 'red'}} */}
->>>>>>> caroline
       <legend>
         <h1>Payment</h1>
       </legend>
