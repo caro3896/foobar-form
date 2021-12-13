@@ -30,38 +30,51 @@
   padding-bottom: 10px;
   margin-top: 20px;
 }
+
+.EmptyBasket {
+  position: fixed;
+  width: 80vw;
+  height: 20vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  border: 2px solid colors.$border_color_on_components;
+  background-color: colors.$baggrundscolor_on_components;
+  border-radius: 20px;
+
+  p {
+    text-align: center;
+    margin-top: 20%;
+  }
+}
 /* TABLET */
 
 @media (min-width: 768px) {
+  .EmptyBasket {
+    width: 50vw;
+    height: 20vh;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 /* DESKTOP */
 
 @media (min-width: 1080px) {
-  /*
- //en anden måde at beholde knap i bunden af fieldset
-  .Your_order_id {
-    position: relative;
-  }
-  .Next {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  */
   .Your_order_id {
     padding-bottom: 20px;
     margin-top: 0;
   }
-  // .Next {
-  //   padding: 14px 43px 14px 43px;
-  //   font-size: 1.01rem;
-  //   border: 2px solid;
-  // }
-  // .Next:hover {
-  //   background-color: colors.$color_on_button_in_hover;
-  //   border: 2px solid #0c1618;
-  //   box-shadow: inset 3px 3px 7px colors.$color_on_box_shadow, 3px 3px 6px colors.$color_on_box_shadow;
-  //   color: colors.$base_color;
-  // }
+
+  .EmptyBasket {
+    width: 30vw;
+    height: 20vh;
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }

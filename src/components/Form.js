@@ -10,7 +10,7 @@ export default function Form(props) {
   }, initialValue);
 
   /* Form post */
-
+  console.log(props);
   const form = useRef();
 
   /* const data = [
@@ -48,8 +48,9 @@ export default function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(form.current.checkValidity());
+    //console.log(form.current.checkValidity());
     if (form.current.checkValidity()) {
+      console.log("test");
       post(data);
       props.setThanks();
     } else {
@@ -69,7 +70,7 @@ export default function Form(props) {
       }); */
 
   return (
-    <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
+    <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"} `}>
       <legend>
         <h1>Payment</h1>
       </legend>
