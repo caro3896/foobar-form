@@ -6,8 +6,8 @@ import Basket from "./components/Basket";
 import Form from "./components/Form";
 import Thanks from "./components/Thanks";
 
-import { useState } from "react/cjs/react.development";
-import { useEffect } from "react";
+//import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 
 function App() {
   const [availableBeers, setAvailableBeers] = useState([]);
@@ -59,7 +59,7 @@ function App() {
       <Order setPayment={payment} />
       <BeerList setBasket={setBasket} addToBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
       <Basket basket={basket} setPayment={goToPayment} setThanks={thanks} />
-      <Form basket={basket} setPayment={payment} setThanks={goToThanks}/>
+      <Form basket={basket} setPayment={payment} setThanks={goToThanks} />
       <Thanks setThanks={thanks} />
     </div>
   );
