@@ -72,9 +72,9 @@ export default function Beer(props) {
           Read more
         </button>
         <span className="addOrRemove">
-          <button onClick={removeOne}>-</button>
+          <button className="add" onClick={removeOne}>-</button>
           <p>{amount}</p>
-          <button onClick={addOne}>+</button>
+          <button className="add" onClick={addOne}>+</button>
         </span>
       </article>
 

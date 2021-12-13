@@ -5,7 +5,8 @@ export default function thankYou(props){
           <h1>Thank you for your order</h1>
           </legend>
           <p>Thank you for ordering at Foobar.</p>
-          <p>Your order is currently being prepared and will be available shortly.</p>  
+          <p>Your order is currently being prepared and will be available shortly.</p> 
+          <button className="return">Close</button> 
       </fieldset>
     )
   

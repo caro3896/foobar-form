@@ -59,7 +59,7 @@ function App() {
       <Order setPayment={payment} />
       <BeerList setBasket={setBasket} addToBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
       <Basket basket={basket} setPayment={goToPayment} setThanks={thanks} />
-      <Form basket={basket} setPayment={payment} setThanks={goToThanks} />
+      <Form basket={basket} setPayment={payment} goToPayment={goToPayment} setThanks={goToThanks} />
       <Thanks setThanks={thanks} />
     </div>
   );

@@ -1,7 +1,28 @@
+@use "../base/colors";
+
 /* MOBIL */
 .Thanks_id {
+  position: absolute;
+  width: 91vw;
+  height: 91vh;
+  background-color: colors.$baggrundcolor;
+  top: 20px;
+  legend {
+    background-color: colors.$baggrundcolor;
+  }
   p {
+    margin-top: 20px;
     line-height: 1.6em;
+    text-align: center;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  .Thanks_id {
+    width: 95vw;
+    top: 40px;
   }
 }
 
@@ -9,6 +30,8 @@
 
 @media (min-width: 1080px) {
   .Thanks_id {
+    top: 20px;
+    width: 98vw;
     p {
       text-align: center;
       line-height: 1.8em;
