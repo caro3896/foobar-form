@@ -34,9 +34,9 @@ button {
   background: none;
   border: none;
   box-shadow: none;
-  z-index: 5;
+  float: right;
   position: fixed;
-  right: 13vw;
+  right: 40px;
   color: colors.$base_color;
   font-size: 1.6rem;
 }
@@ -70,6 +70,9 @@ button {
   }
   .Read_more {
     padding: 7px 10px;
+  }
+  .Close {
+    right: 60px;
   }
   .Next {
     width: 300px;
@@ -111,6 +114,9 @@ button {
 
   .Next {
     padding: 14px 43px 14px 43px;
+  }
+  .Close {
+    right: 750px;
   }
 
   .Close:hover {

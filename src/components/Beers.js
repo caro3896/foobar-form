@@ -83,7 +83,7 @@ export default function Beer(props) {
         <button onClick={readMore} className="Close">
           X
         </button>
-        <div className="modalContent">
+        {/* <div className="modalContent"> */}
           <div className="columnLeft">
             <h2 className="NameModal">{props.name}</h2>
             <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
@@ -96,7 +96,7 @@ export default function Beer(props) {
             <p className="HeaderModal">Aroma</p>
             <p className="FlavorModal">{props.description.aroma}</p>
           </div>
-        </div>
+        {/* </div> */}
       </article>
     </>
   );
