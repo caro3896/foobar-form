@@ -3,6 +3,7 @@ import { post } from "../Post/crud";
 import "animate.css";
 
 export default function Form(props) {
+  console.log(props);
   const initialValue = 0;
   let sum = props.basket.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue.price;
@@ -53,12 +54,7 @@ export default function Form(props) {
       }); */
 
   return (
-<<<<<<< HEAD
     <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
-=======
-    <fieldset className={`Payment_id ${props.setPayment ? "" : "hide"}` || `Payment_id ${props.setThanks ? "hide" : ""}`}>
-      {/* {{'backgroundColor': status === 'approved' ? 'blue' : status === 'pending' ? 'black' : 'red'}} */}
->>>>>>> caroline
       <legend>
         <h1>Payment</h1>
       </legend>

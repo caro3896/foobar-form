@@ -1,0 +1,119 @@
+@use "../base/colors";
+
+button {
+  border-radius: 50px;
+  background: colors.$base_color;
+  border: colors.$color_on_box_shadow 1px solid;
+  box-shadow: inset 4px 6px 15px colors.$color_on_inner_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.Next {
+  margin: 5px;
+  padding: 14px 59px 14px 59px;
+  margin-top: 30px;
+}
+
+.add {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: colors.$base_color;
+  box-shadow: none;
+}
+
+.Read_more {
+  margin: 5px;
+  padding: 9px 14px;
+}
+
+.Close {
+  background: none;
+  border: none;
+  box-shadow: none;
+  z-index: 5;
+  position: fixed;
+  right: 10px;
+  color: colors.$base_color;
+  font-size: 1.6rem;
+}
+
+.back {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: colors.$base_color;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#pay {
+  margin: 10px auto;
+  display: flex;
+  padding: 14px 59px 14px 59px;
+}
+
+.return {
+  margin: 30px auto;
+  padding: 14px 59px 14px 59px;
+  display: flex;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  button {
+    border: 2px solid;
+  }
+  .Read_more {
+    padding: 7px 10px;
+  }
+  .Next {
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #pay {
+    padding: 14px 43px 14px 43px;
+    width: 230px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .return {
+    margin-top: 50px;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  button {
+    font-size: 1.01rem;
+    border: 2px solid;
+  }
+
+  .Next:hover,
+  .Read_more:hover,
+  .return:hover,
+  #pay:hover {
+    background-color: colors.$color_on_button_in_hover;
+    border: 2px solid #0c1618;
+    box-shadow: inset 3px 3px 7px colors.$color_on_box_shadow, 3px 3px 6px colors.$color_on_box_shadow;
+    color: colors.$base_color;
+  }
+
+  .Next {
+    padding: 14px 43px 14px 43px;
+  }
+
+  .Close:hover {
+    text-decoration: underline;
+  }
+}
