@@ -94,20 +94,20 @@ img.LabelModal {
   }
 
   .AlcModal {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .CategoryModal {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .NameModal {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     margin-top: 0px;
   }
   .FlavorModal {
     margin-bottom: 18px;
   }
   img.LabelModal {
-    width: 66%;
+    width: 50%;
     margin-top: 7px;
     margin-bottom: 7px;
   }
@@ -122,6 +122,7 @@ img.LabelModal {
     height: fit-content;
     margin-top: auto;
     margin-bottom: auto;
+    gap: 5px;
   }
   .columnRight {
     display: grid;

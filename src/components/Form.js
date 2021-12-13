@@ -123,7 +123,7 @@ export default function Form(props) {
                 fill="#9b2525"
               />
             </svg>
-            Eg. 01/2022
+            Eg. 01/22
           </span>
         </div>
         <div className="Form-group">
