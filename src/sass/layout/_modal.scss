@@ -19,6 +19,7 @@
 }
 
 .About_beer {
+  display: grid;
   position: fixed;
   width: 85vw;
   max-height: 95vh;
@@ -89,8 +90,8 @@ img.LabelModal {
   .About_beer {
     width: 702px;
     height: 500px;
+    left: 4%;
     top: 25%;
-    display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
