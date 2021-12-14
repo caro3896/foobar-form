@@ -48,6 +48,7 @@ function App() {
 
   function goToPayment() {
     setPayment((oldState) => !oldState);
+    setThanks();
   }
 
   function goToThanks() {
@@ -60,7 +61,7 @@ function App() {
       <BeerList setBasket={setBasket} addToBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
       <Basket basket={basket} setPayment={goToPayment} setThanks={thanks} />
       <Form basket={basket} setPayment={payment} goToPayment={goToPayment} setThanks={goToThanks} />
-      <Thanks setThanks={thanks} />
+      <Thanks setThanks={thanks} goToPayment={goToPayment}/>
     </div>
   );
 }
