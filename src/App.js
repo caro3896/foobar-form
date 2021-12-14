@@ -39,7 +39,6 @@ function App() {
   }, []);
 
   function addToBasket(beer) {
-    // Problem = opdaterer kun ved + af øl.
     setBasket(function (oldBasket) {
       const nextState = oldBasket.concat(beer);
       return nextState;

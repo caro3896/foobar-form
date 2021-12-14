@@ -26,19 +26,20 @@
     .Impression {
       display: none;
     }
+  }
+  .addOrRemove {
+    display: flex;
+    gap: 15px;
+    max-width: 120px;
+    justify-self: center;
+    margin: 10px auto;
 
-    .addOrRemove {
-      display: flex;
-      gap: 15px;
-      margin-top: 5px;
-
-      p {
-        background: colors.$baggrundcolor;
-        border: 2px solid colors.$border_color_on_components;
-        border-radius: 8px;
-        width: 35px;
-        padding-top: 7px;
-      }
+    p {
+      background: colors.$baggrundcolor;
+      border: 2px solid colors.$border_color_on_components;
+      border-radius: 8px;
+      padding: 8px 10px 5px;
+      width: 33px;
     }
   }
 }

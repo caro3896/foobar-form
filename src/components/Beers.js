@@ -17,22 +17,21 @@ export default function Beer(props) {
     });
   }
 
-  // HJÆLP HER
   function removeOne() {
     console.log(props);
     console.log(props.basket);
     setAmount((prevState) => {
       if (prevState > 0) {
         console.log(props.setBasket);
-
-        // Loop igennem arrayet. Hvis der er flere af den valgte, fjern én
         return prevState - 1;
       }
       return 0;
     });
-    //props.setBasket(removeAlike(props));
+    // Tager den gamle basket, og giver den en ny state
     props.setBasket((prevState) => {
+      // Opretter et tomt array - det er det der skal returneres
       const nextState = [];
+      // Opretter en boolean der skal holde øje med om den aktuelle øl der klikkes minus på er i kurven
       let found = false;
       prevState.forEach((beer) => {
         if (props.name !== beer.name || found) {
@@ -43,18 +42,7 @@ export default function Beer(props) {
       });
       return nextState;
     });
-    //props.basket.pop(props.basket.name); // Pop = fjerne det nyeste i arrayet.
   }
-
-  /* function removeAlike(beer) {
-    let test = props.basket.find((x) => x.name === beer.name);
-    // console.log(test);
-    test = props.basket.indexOf(test);
-    //console.log(test);
-    props.basket.slice([test]);
-    console.log(props.basket);
-    return props.basket;
-  } */
 
   function readMore() {
     setIsOpen((oldState) => !oldState);
@@ -72,9 +60,13 @@ export default function Beer(props) {
           Read more
         </button>
         <span className="addOrRemove">
-          <button className="add" onClick={removeOne}>-</button>
+          <button className="add" onClick={removeOne}>
+            -
+          </button>
           <p>{amount}</p>
-          <button className="add" onClick={addOne}>+</button>
+          <button className="add" onClick={addOne}>
+            +
+          </button>
         </span>
       </article>
 
@@ -95,6 +87,15 @@ export default function Beer(props) {
             <p className="MouthfeelModal">{props.description.overallImpression}</p>
             <p className="HeaderModal">Aroma</p>
             <p className="FlavorModal">{props.description.aroma}</p>
+            <span className="addOrRemove">
+              <button className="add" onClick={removeOne}>
+                -
+              </button>
+              <p>{amount}</p>
+              <button className="add" onClick={addOne}>
+                +
+              </button>
+            </span>
           </div>
         </div>
       </article>
