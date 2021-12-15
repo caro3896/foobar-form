@@ -72,10 +72,12 @@ export default function Beer(props) {
 
       <div className={`Overlay ${isOpen ? "" : "active"}`}></div>
       <article className={`About_beer ${isOpen ? "hide" : "active"}`}>
+        <div className="closeBtn">
         <button onClick={readMore} className="Close">
           X
         </button>
-        {/* <div className="modalContent"> */}
+        </div>
+        <div className="modalContent">
           <div className="columnLeft">
             <h2 className="NameModal">{props.name}</h2>
             <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
@@ -97,7 +99,7 @@ export default function Beer(props) {
               </button>
             </span>
           </div>
-        {/* </div> */}
+        </div>
       </article>
     </>
   );

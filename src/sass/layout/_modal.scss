@@ -19,7 +19,7 @@
 }
 
 .About_beer {
-  display: grid;
+  // display: grid;
   position: fixed;
   width: 85vw;
   max-height: 95vh;
@@ -40,12 +40,9 @@
   overflow-y: scroll;
 }
 
-// .modalContent {
-//   position: fixed;
-//   height: 87vh;
-//   overflow: scroll;
-//   width: 75vw;
-// }
+.modalContent {
+  display: grid;
+}
 
 .NameModal {
   text-align: center;
@@ -93,7 +90,13 @@ img.LabelModal {
     height: 500px;
     left: 4%;
     top: 25%;
+    // grid-template-columns: 1fr 2fr;
+  }
+
+  .modalContent {
+    display: grid;
     grid-template-columns: 1fr 2fr;
+    height: 100%;
   }
 
   img.LabelModal {
