@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+// Sophie
+import { useRef } from "react";
 import CustomerBasket from "./CustomerBasket";
 
 export default function Basket(props) {
@@ -29,6 +30,7 @@ export default function Basket(props) {
         <legend>
           <h1>Your Order</h1>
         </legend>
+        <p className="ClosingTime">{`Last round in: `}</p>
         <CustomerBasket basket={props.basket} />
         <button className={`Next ${props.buttonRemoved ? "hide" : ""}`} onClick={paymentClicked}>
           Go to payment

@@ -1,5 +1,6 @@
+// Caroline, Sophie
 export default function thankYou(props) {
-  function test() {
+  function returnToList() {
     props.goToPayment();
     props.setButtonRemoved((oldState) => !oldState);
 
@@ -16,7 +17,7 @@ export default function thankYou(props) {
       </legend>
       <p>Thank you for ordering at Foobar.</p>
       <p>Your order is currently being prepared and will be available shortly.</p>
-      <button className="return" onClick={test}>
+      <button className="return" onClick={returnToList}>
         Close
       </button>
     </fieldset>

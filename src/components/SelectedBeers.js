@@ -1,7 +1,6 @@
+// Sophie
 export default function SelectedBeer(props) {
-  //console.log(props);
-
-  // BRUG USESTATE/USECONTEXT HER, TIL AT OPDATERE KURV MED ANTAL
+  // BRUG USESTATE/USECONTEXT HER, TIL AT OPDATERE KURV MED ANTAL?
 
   return (
     <article className="In_basket">

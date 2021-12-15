@@ -1,9 +1,7 @@
+// Sophie
 import { useState } from "react";
 
 export default function Beer(props) {
-  // console.log(props);
-  // console.log(props.basket);
-
   const [amount, setAmount] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
 

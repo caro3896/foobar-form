@@ -1,3 +1,4 @@
+// Sophie
 @use "../base/colors";
 /* MOBILVERSION */
 
@@ -26,7 +27,7 @@
 
 .Your_order_id {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 50px 3fr 85px;
   padding-bottom: 10px;
   margin-top: 20px;
 }
@@ -67,6 +68,7 @@
   .Your_order_id {
     padding-bottom: 20px;
     margin-top: 0;
+    grid-template-rows: 50px 3fr 70px;
   }
 
   .EmptyBasket {

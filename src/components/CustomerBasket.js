@@ -1,3 +1,4 @@
+// Sophie
 import SelectedBeer from "./SelectedBeers";
 
 export default function CustomerBasket(props) {
@@ -9,7 +10,7 @@ export default function CustomerBasket(props) {
   const selectedBeers = props.basket.map((beer) => <SelectedBeer {...beer} />);
 
   return (
-    <div id="CustomerBasket" >
+    <div id="CustomerBasket">
       {selectedBeers}
       <hr />
       <span>
@@ -19,10 +20,3 @@ export default function CustomerBasket(props) {
     </div>
   );
 }
-
-/* <article className="In_basket">
-        <img src="" alt="" />
-        <p className="Order_name"></p>
-        <p className="Order_price"></p>
-        <button>+</button>0<button>-</button>
-      </article> */
