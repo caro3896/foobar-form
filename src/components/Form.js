@@ -30,13 +30,6 @@ export default function Form(props) {
       .replace(/[^\dA-Z]/g, "")
       .replace(/(.{4})/g, "$1 ")
       .trim();
-
-    // const input = document.getElementById("cardno");
-    // if (input.ariaValueMax.length > 0) {
-    //   if (input.value.length % 4 === 0) {
-    //     input.value += "    ";
-    //   }
-    // }
   }
 
   const data = props.basket.map((beer) => {
@@ -48,7 +41,6 @@ export default function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    //console.log(form.current.checkValidity());
     if (form.current.checkValidity()) {
       console.log("test");
       post(data);
@@ -57,17 +49,6 @@ export default function Form(props) {
       form.current.reportValidity();
     }
   }
-
-  /* props.basket.forEach((beer) => {
-        const data = [
-          {
-            name: beer.name,
-            amount: 1,
-          },
-        ];
-        console.log(data);
-        post(data);
-      }); */
 
   return (
     <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"} `}>
