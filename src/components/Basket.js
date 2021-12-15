@@ -4,14 +4,13 @@ import CustomerBasket from "./CustomerBasket";
 export default function Basket(props) {
   console.log(props);
 
-  const [buttonRemoved, setButtonRemoved] = useState(false);
   const EmptyBasket = useRef();
   const Overlay = useRef();
 
   function paymentClicked() {
     if (props.basket.length > 0) {
       props.setPayment();
-      setButtonRemoved((oldState) => !oldState);
+      props.setButtonRemoved((oldState) => !oldState);
     } else {
       console.log("nothing in basket");
       EmptyBasket.current.classList.remove("hide");
@@ -31,7 +30,7 @@ export default function Basket(props) {
           <h1>Your Order</h1>
         </legend>
         <CustomerBasket basket={props.basket} />
-        <button className={`Next ${buttonRemoved ? "hide" : ""}`} onClick={paymentClicked}>
+        <button className={`Next ${props.buttonRemoved ? "hide" : ""}`} onClick={paymentClicked}>
           Go to payment
         </button>
       </fieldset>

@@ -50,12 +50,19 @@ export default function Form(props) {
     }
   }
 
+  function test() {
+    props.goToPayment();
+    props.setButtonRemoved((oldState) => !oldState);
+  }
+
   return (
     <fieldset className={`Payment_id ${props.setPayment ? "animate__animated animate__fadeInLeft" : "hide"} `}>
       <legend>
         <h1>Payment</h1>
       </legend>
-      <button className="back" onClick={props.goToPayment}>&#10229;</button>
+      <button className="back" onClick={test}>
+        &#10229;
+      </button>
       <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="Form-group">
           <label htmlFor="name">Your name</label>

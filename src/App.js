@@ -14,6 +14,7 @@ function App() {
   const [basket, setBasket] = useState([]);
 
   const [payment, setPayment] = useState(false);
+  const [buttonRemoved, setButtonRemoved] = useState(false);
   const [thanks, setThanks] = useState(false);
 
   useEffect(() => {
@@ -58,9 +59,9 @@ function App() {
     <div className="App">
       <Order setPayment={payment} />
       <BeerList setBasket={setBasket} addToBasket={addToBasket} basket={basket} beers={availableBeers} setPayment={payment} />
-      <Basket basket={basket} setPayment={goToPayment} setThanks={thanks} />
-      <Form basket={basket} setPayment={payment} goToPayment={goToPayment} setThanks={goToThanks} />
-      <Thanks setThanks={thanks} goToPayment={goToPayment}/>
+      <Basket basket={basket} setPayment={goToPayment} setThanks={thanks} buttonRemoved={buttonRemoved} setButtonRemoved={setButtonRemoved} />
+      <Form basket={basket} setPayment={payment} goToPayment={goToPayment} setThanks={goToThanks} buttonRemoved={buttonRemoved} setButtonRemoved={setButtonRemoved} />
+      <Thanks setThanks={thanks} goToPayment={goToPayment} buttonRemoved={buttonRemoved} setButtonRemoved={setButtonRemoved} setBasket={setBasket} />
     </div>
   );
 }
