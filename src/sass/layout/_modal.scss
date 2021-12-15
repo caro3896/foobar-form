@@ -19,6 +19,7 @@
 }
 
 .About_beer {
+  // display: grid;
   position: fixed;
   width: 85vw;
   max-height: 95vh;
@@ -39,12 +40,9 @@
   overflow-y: scroll;
 }
 
-// .modalContent {
-//   position: fixed;
-//   height: 87vh;
-//   overflow: scroll;
-//   width: 75vw;
-// }
+.modalContent {
+  display: grid;
+}
 
 .NameModal {
   text-align: center;
@@ -71,7 +69,8 @@
 
 .columnRight {
   padding: 0 10px 0 10px;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: auto;
 }
 
 img.LabelModal {
@@ -89,9 +88,15 @@ img.LabelModal {
   .About_beer {
     width: 702px;
     height: 500px;
+    left: 4%;
     top: 25%;
+    // grid-template-columns: 1fr 2fr;
+  }
+
+  .modalContent {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    height: 100%;
   }
 
   img.LabelModal {
@@ -116,9 +121,13 @@ img.LabelModal {
     padding: 0 20px 0 40px;
     border-left: 1px solid colors.$base_color;
     gap: 5px;
+    margin-top: auto;
   }
   .HeaderModal {
     margin-bottom: 0;
+  }
+  .NameModal {
+    margin-top: 0;
   }
 }
 

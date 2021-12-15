@@ -55,7 +55,7 @@ export default function Form(props) {
       <legend>
         <h1>Payment</h1>
       </legend>
-      <button className="back">&#10229;</button>
+      <button className="back" onClick={props.goToPayment}>&#10229;</button>
       <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="Form-group">
           <label htmlFor="name">Your name</label>

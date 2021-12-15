@@ -70,32 +70,34 @@ export default function Beer(props) {
 
       <div className={`Overlay ${isOpen ? "" : "active"}`}></div>
       <article className={`About_beer ${isOpen ? "hide" : "active"}`}>
-        <button onClick={readMore} className="Close">
-          X
-        </button>
-        {/* <div className="modalContent"> */}
-        <div className="columnLeft">
-          <h2 className="NameModal">{props.name}</h2>
-          <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
-          <h3 className="CategoryModal">{props.category}</h3>
-          <p className="AlcModal">{props.alc}%</p>
+        <div className="closeBtn">
+          <button onClick={readMore} className="Close">
+            X
+          </button>
         </div>
-        <div className="columnRight">
-          <p className="HeaderModal">Overall Impression</p>
-          <p className="MouthfeelModal">{props.description.overallImpression}</p>
-          <p className="HeaderModal">Aroma</p>
-          <p className="FlavorModal">{props.description.aroma}</p>
-          <span className="addOrRemove">
-            <button className="add" onClick={removeOne}>
-              -
-            </button>
-            <p>{amount}</p>
-            <button className="add" onClick={addOne}>
-              +
-            </button>
-          </span>
+        <div className="modalContent">
+          <div className="columnLeft">
+            <h2 className="NameModal">{props.name}</h2>
+            <img className="LabelModal" src={`../../images/${props.label}`} alt={props.name} />
+            <h3 className="CategoryModal">{props.category}</h3>
+            <p className="AlcModal">{props.alc}%</p>
+          </div>
+          <div className="columnRight">
+            <p className="HeaderModal">Overall Impression</p>
+            <p className="MouthfeelModal">{props.description.overallImpression}</p>
+            <p className="HeaderModal">Aroma</p>
+            <p className="FlavorModal">{props.description.aroma}</p>
+            <span className="addOrRemove">
+              <button className="add" onClick={removeOne}>
+                -
+              </button>
+              <p>{amount}</p>
+              <button className="add" onClick={addOne}>
+                +
+              </button>
+            </span>
+          </div>
         </div>
-        {/* </div> */}
       </article>
     </>
   );
