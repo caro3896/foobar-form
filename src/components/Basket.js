@@ -30,7 +30,7 @@ export default function Basket(props) {
         <legend>
           <h1>Your Order</h1>
         </legend>
-        <p className="ClosingTime">{`Last round in: `}</p>
+        <p className="ClosingTime">Last round at 22:00</p>
         <CustomerBasket basket={props.basket} />
         <button className={`Next ${props.buttonRemoved ? "hide" : ""}`} onClick={paymentClicked}>
           Go to payment
