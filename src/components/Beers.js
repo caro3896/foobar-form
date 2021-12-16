@@ -1,4 +1,4 @@
-// Sophie
+// Sophie, Helena
 import { useState } from "react";
 
 export default function Beer(props) {
