@@ -67,7 +67,7 @@ export default function Form(props) {
       <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="Form-group">
           <label htmlFor="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="E.g. John Doe" requireds />
+          <input type="text" id="name" name="name" placeholder="E.g. John Doe" required />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
@@ -100,8 +100,8 @@ export default function Form(props) {
         <div className="Form-group Expire">
           <label htmlFor="expire-month">Expiry Date</label>
           <label htmlFor="expire-year"></label>
-          <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" required pattern="[0-9]{2}" />
-          <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YY" required pattern="[0-9]{2}" />
+          <input type="tel" id="expire-month" name="expire-month" inputmode="numeric" placeholder="MM" pattern="[0-9]{2}" required />
+          <input type="tel" id="expire-year" name="expire-year" inputmode="numeric" placeholder="YY" pattern="[0-9]{2}" required />
           <span className="Error">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.612" height="17.612" viewBox="0 0 17.612 17.612">
               <path
