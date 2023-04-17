@@ -19,7 +19,7 @@ function App() {
   const [thanks, setThanks] = useState(false);
 
   useEffect(() => {
-    Promise.all([fetch("https://the-three-must-get-beers.herokuapp.com/").then((res) => res.json()), fetch("https://the-three-must-get-beers.herokuapp.com/beertypes").then((res) => res.json())]).then((data) => {
+    Promise.all([fetch("https://ethereal-green-hyacinth.glitch.me").then((res) => res.json()), fetch("https://ethereal-green-hyacinth.glitch.me/beertypes").then((res) => res.json())]).then((data) => {
       const taps = data[0].taps;
       // [{},{},]
 
