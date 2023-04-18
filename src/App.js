@@ -19,7 +19,7 @@ function App() {
   const [thanks, setThanks] = useState(false);
 
   useEffect(() => {
-    Promise.all([fetch("https://peat-peridot-swallow.glitch.me/").then((res) => res.json()), fetch("https://peat-peridot-swallow.glitch.me/").then((res) => res.json())]).then((data) => {
+    Promise.all([fetch("https://peat-peridot-swallow.glitch.me/").then((res) => res.json()), fetch("https://peat-peridot-swallow.glitch.me/beertypes").then((res) => res.json())]).then((data) => {
       const taps = data[0].taps;
       // [{},{},]
 
